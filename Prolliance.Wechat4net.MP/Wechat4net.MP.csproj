@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00D605DC-2CBC-4FB2-9E4B-AA486AF695B0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wechat4net.MP</RootNamespace>
+    <AssemblyName>Wechat4net.MP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Wechat4net.MP.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\PushMessageBuilder.cs" />
+    <Compile Include="Business\ReceiveMessageParser.cs" />
+    <Compile Include="Business\ReplyMessageBuilder.cs" />
+    <Compile Include="CallbackManager.cs" />
+    <Compile Include="Common\AccessToken.cs" />
+    <Compile Include="Common\ServiceUrl.cs" />
+    <Compile Include="Define\MediaFile\QuiryNewsListReturnValue.cs" />
+    <Compile Include="Define\MediaFile\QuiryNewsReturnValue.cs" />
+    <Compile Include="Define\MediaFile\QuiryVideoReturnValue.cs" />
+    <Compile Include="Define\MediaFile\Type\Base.cs" />
+    <Compile Include="Define\MediaFile\Type\Image.cs" />
+    <Compile Include="Define\MediaFile\Type\MpNews.cs" />
+    <Compile Include="Define\MediaFile\QuiryCountReturnValue.cs" />
+    <Compile Include="Define\MediaFile\Type\Thumb.cs" />
+    <Compile Include="Define\MediaFile\UploadReturnValue.cs" />
+    <Compile Include="Define\MediaFile\Utils.cs" />
+    <Compile Include="Define\MediaFile\Type\Video.cs" />
+    <Compile Include="Define\MediaFile\Type\Voice.cs" />
+    <Compile Include="Define\MediaFile\QuiryMediaFileListReturnValue.cs" />
+    <Compile Include="Define\PushMessageReturnValue.cs" />
+    <Compile Include="Define\PushMessage\Base.cs" />
+    <Compile Include="Define\PushMessage\Image.cs" />
+    <Compile Include="Define\PushMessage\MpNews.cs" />
+    <Compile Include="Define\PushMessage\Voice.cs" />
+    <Compile Include="Define\PushMessage\Video.cs" />
+    <Compile Include="Define\PushMessage\Text.cs" />
+    <Compile Include="Define\PushMessage\WxCard.cs" />
+    <Compile Include="Define\ReceiveMessage\Base.cs" />
+    <Compile Include="Define\ReceiveMessage\EventClick.cs" />
+    <Compile Include="Define\ReceiveMessage\EventEnterAgent.cs" />
+    <Compile Include="Define\ReceiveMessage\EventLocation.cs" />
+    <Compile Include="Define\ReceiveMessage\EventMasssEndJobFinish.cs" />
+    <Compile Include="Define\ReceiveMessage\EventScan.cs" />
+    <Compile Include="Define\ReceiveMessage\EventSubscribe.cs" />
+    <Compile Include="Define\ReceiveMessage\EventView.cs" />
+    <Compile Include="Define\ReceiveMessage\Image.cs" />
+    <Compile Include="Define\ReceiveMessage\Link.cs" />
+    <Compile Include="Define\ReceiveMessage\Location.cs" />
+    <Compile Include="Define\ReceiveMessage\ShortVideo.cs" />
+    <Compile Include="Define\ReceiveMessage\Text.cs" />
+    <Compile Include="Define\ReceiveMessage\Video.cs" />
+    <Compile Include="Define\ReceiveMessage\Voice.cs" />
+    <Compile Include="Define\ReplyMessage\Base.cs" />
+    <Compile Include="Define\ReplyMessage\Image.cs" />
+    <Compile Include="Define\ReplyMessage\Music.cs" />
+    <Compile Include="Define\ReplyMessage\News.cs" />
+    <Compile Include="Define\ReplyMessage\Text.cs" />
+    <Compile Include="Define\ReplyMessage\Video.cs" />
+    <Compile Include="Define\ReplyMessage\Voice.cs" />
+    <Compile Include="Define\WebAccessTokenReturnValue.cs" />
+    <Compile Include="Define\WechatOption.cs" />
+    <Compile Include="Define\WechatUser.cs" />
+    <Compile Include="MediaFileManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PushManager.cs" />
+    <Compile Include="Tencent\Cryptography.cs" />
+    <Compile Include="Tencent\Sample.cs" />
+    <Compile Include="Tencent\WXBizMsgCrypt.cs" />
+    <Compile Include="UserProvider.cs" />
+    <Compile Include="Utils\AppSettings.cs" />
+    <Compile Include="Utils\CacheKey.cs" />
+    <Compile Include="Utils\CheckSignature.cs" />
+    <Compile Include="Wechat.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Prolliance.Wechat4net\Wechat4net.csproj">
+      <Project>{ec44942e-4cf1-4377-9dda-c796fc0f7326}</Project>
+      <Name>Wechat4net</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
